@@ -33,8 +33,8 @@ class ArticleController extends AbstractController
             'comments' => $comments,
         ]);
 
-        return new Response(sprintf('Будущая страница статьи: %s',
-            ucwords(str_replace('-', ' ', $slug))
-        ));
+//        return new Response(sprintf('Будущая страница статьи: %s',
+//            ucwords(str_replace('-', ' ', $slug))
+//        ));
     }
 }
