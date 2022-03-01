@@ -13,7 +13,8 @@ class ArticleController extends AbstractController
      */
     public function homepage()
     {
-        return new Response('Это наша первая страница на Symfony');
+        return $this->render('articles/homepage.html.twig');
+        //return new Response('Это наша первая страница на Symfony');
     }
 
     /**
