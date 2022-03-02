@@ -3,17 +3,21 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-//use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Twig\Environment;
 
 class ArticleController extends AbstractController
 {
     /**
      * @Route("/", name="app_homepage")
      */
-    public function homepage()
+    public function homepage(Environment $twig)
     {
-        return $this->render('articles/homepage.html.twig');
+        $html = $twig->render('articles/homepage.html.twig');
+        return new Response($html);//10.10 Сервисы и Autowiring
+
+        //return $this->render('articles/homepage.html.twig');
         //return new Response('Это наша первая страница на Symfony');
     }
 
