@@ -1,10 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('css/detail.css') }}">
-{% endblock %}
-
 {% block title %}Статья: {{ article }}{% endblock %}
 
 {% block body %}
@@ -111,9 +106,4 @@
     </div>
 </div>
 
-{% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
-    <script src="{{ asset('js/like.js') }}"></script>
 {% endblock %}
